@@ -1,0 +1,19 @@
+.breadcrumbs {
+  text-align: center;
+  @media @small {
+    display: none;
+  }
+  &__item {
+    font-size: 16px;
+    text-transform: lowercase;
+    display: inline-block;
+    color: #393939;
+    &--current {
+      color: #b1b1b1;
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+}

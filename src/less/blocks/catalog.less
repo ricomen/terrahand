@@ -1,0 +1,315 @@
+.catalog {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  @media @small {
+    flex-direction: column;
+  }  
+  
+  @media @small {
+    width: 100%;
+  }
+
+  &__sidebar {
+    padding-top: 50px;
+    flex-basis: 22.3%;
+    min-width: 250px;    
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    @media @small {
+      padding-top: 0;
+      width: 100%;
+      overflow: visible;
+      border-radius: 0;
+      > .catalog__title {
+        display: none;
+      }
+    }
+  }//sidebar
+
+  &__filter {
+    &-wrap{
+      background: #fff;
+      overflow: hidden;
+      border-radius: 10px;
+      @media @small {
+        display: none;
+      }
+    }//wrapper
+
+    &-item,
+    &-content {
+      &--active > .catalog__filter-spoiler {        
+        &::after {
+          background-image: data-uri("../img/icons/arrow.png");
+          background-position: center;
+        }
+      }
+      &--active .catalog__filter-content {
+        display: block;
+      }
+    }
+    &-spoiler,
+    &-type {
+      position: relative;
+      cursor: pointer;
+      display: block;          
+      border-bottom: 1px solid #e4e8f0;
+      padding: 16px 25px;      
+      background-repeat: no-repeat;
+      &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+        right: 22px;
+        background-repeat: no-repeat;
+        width: 15px;
+        height: 15px;
+        background-position: center;
+      }
+    }
+    &-spoiler::after {      
+      background-image: data-uri("../img/icons/arrow-right.png");
+
+    }
+
+    &-type {
+      position: relative;
+      color: #fff;
+      background-color: @blue;
+      &::after {
+        background-image: data-uri("../img/icons/arrow-right.png");
+      }
+      &.catalog__filter-type--active {
+        + .catalog__filter-param {
+          display: block;
+        }
+        &::after {
+          background-image: data-uri("../img/icons/arrow.png");
+        }
+      }
+    }
+
+    &-content { 
+      display: none;     
+      ul {        
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      li {
+        background: #f8f8f8;      
+        border-bottom: 1px solid #e4e8f0;
+        padding: 16px 25px;
+
+      }
+      input[type="checkbox"] {
+        display: none;
+      }
+      input[type="checkbox"] + label {
+        display: block;
+        position: relative;
+        font-size: 18px;
+        color: #7f7fc3;
+        padding-left: 40px;
+        &::before {
+          position: absolute;
+          content: "";
+          left: 0;
+          top: 50%;
+          margin-top: -11.5px;
+          width: 23px;
+          height: 23px;
+          border: 1px solid #d1d1e2;
+          border-radius: 4px;
+          box-shadow: inset 2px 2px rgba(0, 0, 0, 0.1);
+          background: #fff;
+        }
+      }
+      input[type="checkbox"]:checked + label::before {
+        background: #fff data-uri("../img/icons/check.png") no-repeat center;
+      }//input checkbox
+
+    }//filter-content
+    &-param {
+      display: none;
+      background: #f8f8f8;
+    }
+  }//filter
+
+  &__wrapper {
+    width: 72%;
+    @media @small {
+      width: 100%;
+    }
+  }//wrapper
+
+  &__list {
+    font-size: 0;
+  }//popular
+
+  &__title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    @media @small {
+      margin-top: 50px;
+      font-size: 24px;
+    }
+  }//title
+
+  &__filter-range {
+    padding: 14px 25px;
+    input[type="text"] {
+      display: inline-block;
+      margin-bottom: 30px;
+      width: 45%;
+      text-align: center;
+      font-size: 16px;
+      border: 1px solid #e3e5eb;
+      outline: none;
+      border-radius: 15px;
+      padding: 8px 5px;
+      box-sizing: border-box;
+      background: #fff;
+      &::placeholder {
+        color: @text-color;
+      }
+    }
+    #slider-range {
+      width: 100%;
+      // margin-left: auto;
+      // margin-right: auto;
+    }
+    /* Контейнер слайдера */
+    .ui-slider {  
+      position: relative;
+      margin-bottom: 35px;
+    }
+    /* Ползунок */
+    .ui-slider .ui-slider-handle {
+        position: absolute;
+        z-index: 2;    
+        width: 14px;  /* Задаем нужную ширину */
+        height: 14px;  /* и высоту */
+        border: 3px solid #000066;
+        background: radial-gradient(circle at 9px 8px, #000066 1px, #9797c1 );
+        border-radius: 50%;    /* картинка изображающая ползунок. Или можно залить цветом, задать бордюр и скругления */
+        cursor: pointer;    
+    }
+    //выбранный диапазон
+    .ui-slider .ui-slider-range {
+        position: absolute;
+        z-index: 1;
+        font-size: .7em;
+        display: block;
+        border: 0;
+        overflow: hidden;
+        background: linear-gradient(110deg, #a0a0cd 3px, #9393c6 3px, #9393c6 6px, #a0a0cd 6px);
+        background-size: 10px 10px;
+    }
+    /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+    .ui-slider-horizontal {
+      height: 10px; /* задаем высоту согласно дизайна */
+      box-shadow: 0 2px 4px #fff;
+    }
+    /* позиционируем ползунки */
+    .ui-slider-horizontal .ui-slider-handle {   
+      top: 0;
+      margin-top: -5px;
+      margin-left: -10px;
+    }
+    .ui-slider-horizontal .ui-slider-handle:nth-child(2) span,
+    .ui-slider-horizontal .ui-slider-handle:nth-child(3) span {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);  
+    }
+    .ui-slider-horizontal .ui-slider-range {
+        top: 0;
+        height: 100%;
+    }
+    .ui-slider-horizontal .ui-slider-range-min { 
+        left: 0;  
+    }
+    .ui-slider-horizontal .ui-slider-range-max {
+        right: 0;
+    }
+    /* оформление полосы по которой ходит ползунок */
+    .ui-widget-content { 
+        border: 1px solid #D4D4D4;
+        background: #fff;
+    }
+    /* оформление активного участка (между двумя ползунками) */
+    .ui-widget-header { 
+        border: 1px solid #D4D4D4;
+        background: #000;
+    }
+    /* скругление для полосы слайдера */
+    .ui-corner-all {
+        // border-radius: 5px;  
+    }
+
+  }
+
+  &__menu {
+    &-wrap {
+      position: relative;
+      background: @blue;
+      color: #fff;
+      z-index: 10;
+      display: none;
+      @media @small {
+        display: block;
+      }
+    }//wrap
+
+    &-dropdown {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      display: none;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background: @blue;
+      width: 100%;
+      li {
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+      }
+      a {
+        text-transform: uppercase;
+        display: block;
+        padding: 10px 30px;
+        font-size: 18px;
+        color: #fff;
+      }
+    }//dropdown
+
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 30px;
+
+      > a {
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-decoration: underline;
+      }
+      &:last-child {
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+        a {
+          .center;
+        }
+      }
+    }
+  }
+
+
+}//catalog

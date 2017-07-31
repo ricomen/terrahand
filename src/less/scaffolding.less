@@ -1,0 +1,66 @@
+html,
+body {
+  height: 100%;
+}
+body {  
+  margin: 0;
+  padding: 0;
+  font-size: @font-size;
+  font-family: @Gotham;
+  font-weight: 500;  
+  color: @text-color;
+  background-color: #eff0f1;  
+  min-width: 320px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1400px;  
+  .center();  
+  box-sizing: border-box;
+
+  // @media @tablet {
+  //   padding: 0 10px;
+  // }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  // font-family: @font-family;
+}
+
+a {
+  margin: 0;
+  padding: 0;    
+  text-decoration: none;
+}
+input,
+textarea {
+  font-family: inherit;
+  &:focus {
+    outline: none;
+  }
+}
+// градиент для текста
+// -------------------
+// -webkit-background-clip: text;
+// -webkit-text-fill-color: transparent;
+// -------------------
+// a {  
+//   text-decoration: none;
+//   background-color: transparent;
+//   &:hover,
+//   &:focus {
+//     color: $link-color--hover;
+//     text-decoration: underline;
+//   }
+// }
+
+//от переполнения тпекстом
+// white-space: nowrap;
+// overflow: hidden;
+// text-overflow: ellipsis;

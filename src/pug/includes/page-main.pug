@@ -1,0 +1,209 @@
+.page-main  
+  .container
+    .catalog
+      aside.catalog__sidebar
+        .catalog__menu-wrap
+          .catalog__menu-row
+            a(id="catalog-nav" href="/").catalog__menu-btn Меню
+            ul.catalog__menu-dropdown
+              li: a(href="/") Для продавцов
+              li: a(href="/") Для покупателей
+              li: a(href="/") Каталог товаров
+              li: a(href="/") О нас
+            a(id="catalog-currency" href="/").catalog__menu-btn Выбор валюты
+            ul.catalog__menu-dropdown
+              li: a(href="/" data-currency="Руб") Руб
+              li: a(href="/" data-currency="Usd") Usd
+              li: a(href="/" data-currency="Gbp") Gbp
+              li: a(href="/" data-currency="Cad") Cad
+            input(type="text" name="currency" hidden)
+          .catalog__menu-row
+            a(id="catalog-filter" href="/").catalog__menu-btn Развернуть каталог
+        h2.catalog__title Каталог
+        form.catalog__filter-wrap(action="/" method="GET")
+          .catalog__filter-item
+            span.catalog__filter-spoiler Все для свадьбы
+          .catalog__filter-item
+            span.catalog__filter-spoiler Аксессуары              
+          .catalog__filter-item.catalog__filter-item--active
+            span.catalog__filter-spoiler Обувь
+            .catalog__filter-content
+              span.catalog__filter-type.catalog__filter-type--active Тип
+              ul.catalog__filter-param
+                li
+                  input(type="checkbox" id="checkbox-shoes-1")
+                  label(for="checkbox-shoes-1") Ботинки
+                li
+                  input(type="checkbox" id="checkbox-shoes-2" checked)
+                  label(for="checkbox-shoes-2") Галоши
+                li
+                  input(type="checkbox" id="checkbox-shoes-3")
+                  label(for="checkbox-shoes-3") Кеды
+                li
+                  input(type="checkbox" id="checkbox-shoes-4")
+                  label(for="checkbox-shoes-4") Кроссовки
+              span.catalog__filter-type.catalog__filter-type--active Кому
+              ul.catalog__filter-param
+                li
+                  input(type="checkbox" id="checkbox-men" checked)
+                  label(for="checkbox-men") Мужчинам
+                li
+                  input(type="checkbox" id="checkbox-women")
+                  label(for="checkbox-women") Женщинам
+                li
+                  input(type="checkbox" id="checkbox-boy")
+                  label(for="checkbox-boy") Мальчикам
+                li
+                  input(type="checkbox" id="checkbox-girl")
+                  label(for="checkbox-girl") Девочкам
+              span.catalog__filter-type Цвет
+              span.catalog__filter-type Сезон
+              span.catalog__filter-type Скидка
+              span.catalog__filter-type.catalog__filter-type--active Цена
+              .catalog__filter-param
+                .catalog__filter-range
+                  input(type="text" id="minCost" data-range="0" placeholder="от")
+                  input(type="text" id="maxCost" data-range="75000" placeholder="до")
+                  .catalog__filter-slider#slider-range
+              span.catalog__filter-type Аксессуары
+          .catalog__filter-item
+            span.catalog__filter-spoiler Для детей
+          .catalog__filter-item
+            span.catalog__filter-spoiler Для домашнего уюта
+          .catalog__filter-item
+            span.catalog__filter-spoiler Живопись
+          .catalog__filter-item
+            span.catalog__filter-spoiler Игрушки
+          .catalog__filter-item
+            span.catalog__filter-spoiler Канцелярские товары
+          .catalog__filter-item
+            span.catalog__filter-spoiler Музыкальные инструменты
+          .catalog__filter-item
+            span.catalog__filter-spoiler Одежда
+          .catalog__filter-item
+            span.catalog__filter-spoiler Подарки
+          .catalog__filter-item
+            span.catalog__filter-spoiler Сувениры
+          .catalog__filter-item
+            span.catalog__filter-spoiler Украшения
+          .catalog__filter-item
+            span.catalog__filter-spoiler Художественное фото
+      section.catalog__wrapper
+        ul.breadcrumbs
+          li.breadcrumbs__item: a(href="index.html") Главная/
+          li.breadcrumbs__item.breadcrumbs__item--current Каталог
+        h2.catalog__title Популярные товары
+        section.catalog__list
+          article.product
+            h2.product__title Весеннее платье
+            .product__author Автор: 
+              span Alice-Silver
+            .product__article(data-article="247B34") Артикул: 
+              span 247B34
+            .product__price 7400 р.
+            .product__properties
+              .product__size
+                input(type="text" name="product-size" readonly placeholder="Размер")
+                ul.product__size-list
+                  li.product__size-item(data-size="XS") XS
+                  li.product__size-item(data-size="S") S
+                  li.product__size-item(data-size="M") M
+                  li.product__size-item(data-size="L") L
+                  li.product__size-item(data-size="XL") XL
+                  li.product__size-item(data-size="XXL") XXL
+              .product__quantity 
+                input(type="text" name="product-quantity" readonly value="1 шт" )
+                button(type="button" data-action="plus")
+                button(type="button" data-action="minus")
+            .product__image
+              img(src="http://www.placehold.it/300x300", alt="")
+            .product__action
+              a.btn.product__buy(href="#") Купить
+              a.btn.product__favorites(href="#")          
+          article.product
+            h2.product__title Весеннее платье
+            .product__author Автор: 
+              span Alice-Silver
+            .product__article(data-article="247B34") Артикул: 
+              span 247B34
+            .product__price 7400 р.
+            .product__properties
+              .product__size
+                input(type="text" name="product-size" readonly placeholder="Размер")
+                ul.product__size-list
+                  li.product__size-item(data-size="XS") XS
+                  li.product__size-item(data-size="S") S
+                  li.product__size-item(data-size="M") M
+                  li.product__size-item(data-size="L") L
+                  li.product__size-item(data-size="XL") XL
+                  li.product__size-item(data-size="XXL") XXL
+              .product__quantity 
+                input(type="text" name="product-quantity" readonly value="1 шт" )
+                button(type="button" data-action="plus")
+                button(type="button" data-action="minus")
+            .product__image
+              img(src="http://www.placehold.it/300x300", alt="")
+            .product__action
+              a.btn.product__buy(href="#") Купить
+              a.btn.product__favorites(href="#")          
+          article.product
+            h2.product__title Весеннее платье
+            .product__author Автор: 
+              span Alice-Silver
+            .product__article(data-article="247B34") Артикул: 
+              span 247B34
+            .product__price 7400 р.
+            .product__properties
+              .product__size
+                input(type="text" name="product-size" readonly placeholder="Размер")
+                ul.product__size-list
+                  li.product__size-item(data-size="XS") XS
+                  li.product__size-item(data-size="S") S
+                  li.product__size-item(data-size="M") M
+                  li.product__size-item(data-size="L") L
+                  li.product__size-item(data-size="XL") XL
+                  li.product__size-item(data-size="XXL") XXL
+              .product__quantity 
+                input(type="text" name="product-quantity" readonly value="1 шт" )
+                button(type="button" data-action="plus")
+                button(type="button" data-action="minus")
+            .product__image
+              img(src="http://www.placehold.it/300x300", alt="")
+            .product__action
+              a.btn.product__buy(href="#") Купить
+              a.btn.product__favorites(href="#")          
+          article.product
+            h2.product__title Весеннее платье
+            .product__author Автор: 
+              span Alice-Silver
+            .product__article(data-article="247B34") Артикул: 
+              span 247B34
+            .product__price 7400 р.
+            .product__properties
+              .product__size
+                input(type="text" name="product-size" readonly placeholder="Размер")
+                ul.product__size-list
+                  li.product__size-item(data-size="XS") XS
+                  li.product__size-item(data-size="S") S
+                  li.product__size-item(data-size="M") M
+                  li.product__size-item(data-size="L") L
+                  li.product__size-item(data-size="XL") XL
+                  li.product__size-item(data-size="XXL") XXL
+              .product__quantity 
+                input(type="text" name="product-quantity" readonly value="1 шт" )
+                button(type="button" data-action="plus")
+                button(type="button" data-action="minus")
+            .product__image
+              img(src="http://www.placehold.it/300x300", alt="")
+            .product__action
+              a.btn.product__buy(href="#") Купить
+              a.btn.product__favorites(href="#")          
+  section.about
+    .container
+      h2.about__title О проекте TerraHand
+      .about__content 
+        a.logo.logo--about
+          img(src="img/logo-1.png" srcset="img/logo-1@2x.png 2x" alt="TerraHand")
+          img(src="img/logo-2.png" srcset="img/logo-2@2x.png 2x" alt="TerraHand")
+        .about__text
+          p Первый в России развлекательный ресурс о бизнесе. Новый формат для людей, создающих будущее. Ежедневно мы публикуем много важнейшие деловые новости, аналитические статьи и многое развлекательные тексты, статьи сопровождая их ироничными иллюстрациями. Ежедневно мы публикуем много важнейшие деловые новости, аналитические. статьи Свидетельство о регистрации средства массовой информации — Эл №ФС77 — 54872 Выдано от 26 июля 2013г. Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор). Любое использование материалов допускается только с письменного согласия редакции.

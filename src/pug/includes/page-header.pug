@@ -1,0 +1,111 @@
+header.page-header
+  .page-header__top
+    .user-block.user-block--mobile
+        .user-block__item
+          a.user-block__btn(href="/")
+            span.user-block__icon.user-block__icon--heart
+            span В избранное
+        .user-block__item.user-block__item--login
+          a.user-block__btn(href="/")
+            span.user-block__icon.user-block__icon--user
+            span Кабинет          
+          .user-block__login-wrap
+            form(action="/" class="user-block__login-form" method="POST")
+              input(type="text" name="login" placeholder="Логин")
+              input(type="text" name="pass" placeholder="Пароль")
+              input(type="submit" value="Войти")
+            .social.social--login
+              span Авторизоваться с помощью:
+              a.social__btn(href=""): i.icon.icon-facebook
+              a.social__btn(href=""): i.icon.icon-gplus
+              a.social__btn(href=""): i.icon.icon-odnoklassniki
+              a.social__btn(href=""): i.icon.icon-vk
+        .user-block__item.user-block__item--cart
+          a.user-block__btn(href="/")
+            span.user-block__icon.user-block__icon--cart
+            span Корзина
+          .user-block__cart
+            ul.user-block__cart-list
+              li.user-block__cart-item(data-article="247B35")
+                a(href="/") Название товара dsfkjndk sdfkjg hekjr
+                span цена
+                button.user-block__cart-btn(type="button") x
+              li.user-block__cart-item(data-article="247B35")
+                a(href="/") Название товара
+                span цена
+                button.user-block__cart-btn(type="button") x
+              li.user-block__cart-item(data-article="247B35")
+                a(href="/") Название товара
+                span цена
+                button.user-block__cart-btn(type="button") x
+    .container
+      nav.main-nav
+        ul.main-nav__list
+          li.main-nav__item
+            a(href="/") Для продавцов
+          li.main-nav__item
+            a(href="/") Для покупателей
+          li.main-nav__item
+            a(href="/") Каталог товаров 
+          li.main-nav__item
+            a(href="/") О нас
+      .currency
+        select(name="currency")
+          option(value="1") Рубли РФ
+          option(value="2") Доллары США
+  .page-header__body
+    .container
+      .page-header__search
+        input(type="text" name="search" placeholder="Поиск товаров")
+      a.logo(href="/")
+        img(src="img/logo-1.png" srcset="img/logo-1@2x.png 2x" alt="TerraHand")
+        img(src="img/logo-2.png" srcset="img/logo-2@2x.png 2x" alt="TerraHand")
+        span Территория для индивидуальностей
+      .user-block
+        .user-block__item
+          a.user-block__btn(href="/")
+            span.user-block__icon.user-block__icon--heart
+            span В избранное
+        .user-block__item.user-block__item--login
+          a.user-block__btn(href="/")
+            span.user-block__icon.user-block__icon--user
+            span Кабинет          
+          .user-block__login-wrap
+            form(action="/" class="user-block__login-form" method="POST")
+              input(type="text" name="login" placeholder="Логин")
+              input(type="text" name="pass" placeholder="Пароль")
+              input(type="submit" value="Войти")
+            .social.social--login
+              span Авторизоваться с помощью:
+              a.social__btn(href=""): i.icon.icon-facebook
+              a.social__btn(href=""): i.icon.icon-gplus
+              a.social__btn(href=""): i.icon.icon-odnoklassniki
+              a.social__btn(href=""): i.icon.icon-vk              
+        .user-block__item.user-block__item--cart
+          a.user-block__btn(href="/")
+            span.user-block__icon.user-block__icon--cart
+            span Корзина
+          .user-block__cart
+            ul.user-block__cart-list
+              li.user-block__cart-item(data-article="247B35")
+                a(href="/") Название товара dsfkjndk sdfkjg hekjr
+                span цена
+                button.user-block__cart-btn(type="button") x
+              li.user-block__cart-item(data-article="247B35")
+                a(href="/") Название товара
+                span цена
+                button.user-block__cart-btn(type="button") x
+              li.user-block__cart-item(data-article="247B35")
+                a(href="/") Название товара
+                span цена
+                button.user-block__cart-btn(type="button") x
+  .slider
+    .slider__wrap
+      .slider__item.slider__item--1
+        .slider__content Уникальные украшения<br>ручной работы
+      .slider__item.slider__item--2
+        .slider__content Уникальные украшения<br>ручной работы
+      .slider__item.slider__item--3
+        .slider__content Уникальные украшения<br>ручной работы
+    button(type="button").slider__control-prev
+    button(type="button").slider__control-next

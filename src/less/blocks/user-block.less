@@ -1,0 +1,208 @@
+.user-block {
+  display: flex;
+  &--mobile {
+    display: none;
+    @media @small {
+      span:last-child {
+        display: none;
+      }
+      position: relative;
+      display: flex !important;
+      justify-content: space-around;
+    }
+    .user-block__item--login,
+    .user-block__item--cart {
+      position: static;
+    }
+    .user-block__login-wrap,
+    .user-block__cart {
+      left: 0;
+      width: 100%;
+    }
+  }//mobile
+  
+
+  &__icon {
+    margin-right: 20px;
+    width: 35px;
+    height: 35px;
+    background-color: @blue;
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 5px 8px rgba(0, 0, 255, 0.5);
+    &::before {
+      position: absolute;
+      content: "";   
+      background-image: url(../img/sprite.png);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--heart::before {
+      background-position: 0px 0px;
+      background-repeat: no-repeat;
+      width: 17px;
+      height: 15px;
+    }
+
+    &--user::before {
+      background-position: 0px -363px;
+      width: 18px;
+      height: 18px;
+    }
+
+    &--cart::before {
+      background-position: 0px -233px;
+      width: 21px;
+      height: 16px;
+    }
+  }//icon
+
+
+  &__item {
+    position: relative;
+    margin-right: 25px;
+    z-index: 15;
+
+    &--login:hover,
+    &--cart:hover {
+      > a::after {
+        position: absolute;
+        content: "";
+        background-image: url(../img/sprite.png);
+        background-position: 0px -450px;
+        width: 63px;
+        height: 23px;
+        left: -14px;
+        top: 50%;
+        bottom: -5px;
+        z-index: -1;
+      }
+      .user-block__login-wrap {
+        display: block;
+      }
+      .user-block__cart {
+        display: block;
+      }
+    }//login ,cart
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    &::after {
+
+    }
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 50%;
+    }
+  }//btn
+
+  &__login-wrap {
+    display: none;
+    position: absolute;
+    left: -115px;
+    top: 100%+4px;
+    width: 265px;
+    padding: 21px;
+    background: @blue;
+    border-radius: 12px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+    box-sizing: border-box;
+  }//login-wrap
+
+  &__login-form {
+    margin-bottom: 15px;
+    input {
+      width: 100%;
+      font-size: 16px;
+      line-height: 2.125;
+      border: none;
+      outline: none;
+      box-sizing: border-box;
+      border-radius: 17px;
+      &[type="text"] {
+        padding: 0 20px;
+        margin-bottom: 10px;
+        box-shadow: inset 3px 5px 0px 0px rgba(191, 197, 216, 0.29);
+      }
+      &[type="submit"] {
+        cursor: pointer;
+        font-weight: bold;
+        color: #fff;
+        background: transparent;
+        border: 2px solid #fff;
+        text-transform: uppercase;
+        transition: 0.25s; 
+        &:hover {
+          background: @bluehover;
+        }
+      }
+    }
+  }//login-form
+
+  &__cart {
+    display: none;
+    position: absolute;
+    left: -169px;
+    top: 100%+4px;
+    width: 373px;
+    color: #fff;    
+    box-sizing: border-box;
+
+    &-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-radius: 15px;
+      overflow: hidden;
+      @media @small {
+        border-radius: 0;
+      }
+    }
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background:@blue;
+      &:nth-child(even) {
+        background: #1a1a76;
+      }
+      a {
+        width: 150px;
+        color: #fff;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }//item
+
+    &-btn {
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      border: none;
+      outline: none;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      color: #fff;      
+      background: #00003d;
+      font-weight: bold;
+      &:active {
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+
+      }
+    }
+  }//cart
+
+  @media @small {
+    display: none;
+  }
+}//user-block

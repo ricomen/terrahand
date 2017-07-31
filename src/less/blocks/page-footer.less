@@ -1,0 +1,146 @@
+.page-footer {
+  padding-bottom: 60px;
+
+  &__nav {
+    padding: 50px 0;
+
+    @media @phone {
+      padding: 0;
+      .container {
+        padding: 0px;
+      }
+    }
+
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      @media @phone {
+        flex-direction: column;
+      }
+
+      &-lvl2 {
+        margin: 30px 0 0;
+        padding: 0;
+        list-style: none;
+        @media @phone {
+          display: none;          
+        }
+      }
+      > .page-footer__nav-item > a {
+        font-size: 18px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: @text-color;
+        @media @phone {
+          font-size: 20px;
+          display: block;
+          padding: 20px 0;
+          text-align: center;
+          color: #fff;
+          background: @blue;
+          text-decoration: underline;
+          border-bottom: 1px solid #fff;
+          &:hover,
+          &:active  {
+            color: #ccc;
+          }
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+
+      &-lvl2 .page-footer__nav-item {
+        position: relative;
+        margin-bottom: 12px;
+        padding-left: 24px;
+        font-size: 18px;
+        text-transform: none;        
+
+        &::before {
+          position: absolute;        
+          content: "";
+          left: 0;
+          top: 50%;
+          margin-top: -4.5px;        
+          width: 7px;
+          height: 7px;
+          background: #fff;
+          border: 1px solid @blue;
+          border-radius: 50%;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    a {
+      text-decoration: underline;
+      color: @blue;
+      &:hover,
+      &:active {
+        color: @bluehover;
+      }
+    }
+  }
+
+  &__body {
+    padding: 64px 0;
+    background: #fff;
+    .container {
+      padding: 0 10px;
+      display: flex;
+      justify-content: space-between;      
+    }
+  }
+
+  &__bottom {
+    padding: 50px 0 0;
+    .container {
+      padding: 0 10px;
+    }
+  }
+
+  &__copyright {
+      font-family: "Calibri", @Gotham;
+      font-size: 18px;
+      line-height: 1.333;
+
+      @media @phone {
+        margin-bottom: 25px;
+      }
+
+      &-wrap {        
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        @media @phone {
+          flex-direction: column;
+          text-align: center;
+          margin-bottom: 25px;
+        }
+
+      }
+
+    p {
+      margin: 0;
+      color: #7f8c8d;
+    }
+    
+  }
+  &__privacy {
+    @media @phone {
+      text-align: center;
+    }
+    a {    
+      color: @blue; 
+      text-decoration: underline;
+    }
+  }
+}

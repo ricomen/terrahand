@@ -1,0 +1,52 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &--login {
+    display: flex;
+    justify-content: space-around;
+    span {
+      color: #fff;
+      padding-bottom: 15px;
+      @media @phone {
+        display: block;
+        width: 100%;
+        text-align: center;        
+      }
+    }
+  }
+
+  &__btn {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background: #a5a5a5;
+    border-radius: 50%;
+    transition: 0.25s;
+    margin-right: 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:active {
+      background-color: #ccc;
+    }
+
+    i.icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @media @small {
+      margin-bottom: 10px;
+    }
+  }//btn
+  
+  @media @phone {
+    margin: auto;
+  }
+}

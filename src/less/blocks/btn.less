@@ -1,0 +1,29 @@
+.btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  display: inline-block;
+  vertical-align: middle;
+  &--to-top {
+    position: relative;
+    line-height: 35px;
+    padding-right: 55px;
+    color: @blue;
+    ::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      right: 0;
+      margin-top: -17.5%;
+      width: 35px;
+      height: 35px;
+      display: block;
+      background: @blue data-uri("../img/icons/arrow-up.png") no-repeat center;
+      border-radius: 50%;
+      box-shadow: 0 5px 10px rgba(0, 0, 102, .5);
+    }
+    @media @phone {
+      display: none;
+    }
+  }
+}

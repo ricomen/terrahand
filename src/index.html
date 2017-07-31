@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>TerraHand</title><!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>   
+    <header class="page-header">
+      <div class="page-header__top">
+        <div class="user-block user-block--mobile">
+          <div class="user-block__item"><a class="user-block__btn" href="/"><span class="user-block__icon user-block__icon--heart"></span><span>В избранное</span></a></div>
+          <div class="user-block__item user-block__item--login"><a class="user-block__btn" href="/"><span class="user-block__icon user-block__icon--user"></span><span>Кабинет          </span></a>
+            <div class="user-block__login-wrap">
+              <form class="user-block__login-form" action="/" method="POST">
+                <input type="text" name="login" placeholder="Логин">
+                <input type="text" name="pass" placeholder="Пароль">
+                <input type="submit" value="Войти">
+              </form>
+              <div class="social social--login"><span>Авторизоваться с помощью:</span><a class="social__btn" href=""><i class="icon icon-facebook"></i></a><a class="social__btn" href=""><i class="icon icon-gplus"></i></a><a class="social__btn" href=""><i class="icon icon-odnoklassniki"></i></a><a class="social__btn" href=""><i class="icon icon-vk"></i></a></div>
+            </div>
+          </div>
+          <div class="user-block__item user-block__item--cart"><a class="user-block__btn" href="/"><span class="user-block__icon user-block__icon--cart"></span><span>Корзина</span></a>
+            <div class="user-block__cart">
+              <ul class="user-block__cart-list">
+                <li class="user-block__cart-item" data-article="247B35"><a href="/">Название товара dsfkjndk sdfkjg hekjr</a><span>цена</span>
+                  <button class="user-block__cart-btn" type="button">x</button>
+                </li>
+                <li class="user-block__cart-item" data-article="247B35"><a href="/">Название товара</a><span>цена</span>
+                  <button class="user-block__cart-btn" type="button">x</button>
+                </li>
+                <li class="user-block__cart-item" data-article="247B35"><a href="/">Название товара</a><span>цена</span>
+                  <button class="user-block__cart-btn" type="button">x</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a href="/">Для продавцов</a></li>
+              <li class="main-nav__item"><a href="/">Для покупателей</a></li>
+              <li class="main-nav__item"><a href="/">Каталог товаров </a></li>
+              <li class="main-nav__item"><a href="/">О нас</a></li>
+            </ul>
+          </nav>
+          <div class="currency">
+            <select name="currency">
+              <option value="1">Рубли РФ</option>
+              <option value="2">Доллары США</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="page-header__body">
+        <div class="container">
+          <div class="page-header__search">
+            <input type="text" name="search" placeholder="Поиск товаров">
+          </div><a class="logo" href="/"><img src="img/logo-1.png" srcset="img/logo-1@2x.png 2x" alt="TerraHand"><img src="img/logo-2.png" srcset="img/logo-2@2x.png 2x" alt="TerraHand"><span>Территория для индивидуальностей</span></a>
+          <div class="user-block">
+            <div class="user-block__item"><a class="user-block__btn" href="/"><span class="user-block__icon user-block__icon--heart"></span><span>В избранное</span></a></div>
+            <div class="user-block__item user-block__item--login"><a class="user-block__btn" href="/"><span class="user-block__icon user-block__icon--user"></span><span>Кабинет          </span></a>
+              <div class="user-block__login-wrap">
+                <form class="user-block__login-form" action="/" method="POST">
+                  <input type="text" name="login" placeholder="Логин">
+                  <input type="text" name="pass" placeholder="Пароль">
+                  <input type="submit" value="Войти">
+                </form>
+                <div class="social social--login"><span>Авторизоваться с помощью:</span><a class="social__btn" href=""><i class="icon icon-facebook"></i></a><a class="social__btn" href=""><i class="icon icon-gplus"></i></a><a class="social__btn" href=""><i class="icon icon-odnoklassniki"></i></a><a class="social__btn" href=""><i class="icon icon-vk">             </i></a></div>
+              </div>
+            </div>
+            <div class="user-block__item user-block__item--cart"><a class="user-block__btn" href="/"><span class="user-block__icon user-block__icon--cart"></span><span>Корзина</span></a>
+              <div class="user-block__cart">
+                <ul class="user-block__cart-list">
+                  <li class="user-block__cart-item" data-article="247B35"><a href="/">Название товара dsfkjndk sdfkjg hekjr</a><span>цена</span>
+                    <button class="user-block__cart-btn" type="button">x</button>
+                  </li>
+                  <li class="user-block__cart-item" data-article="247B35"><a href="/">Название товара</a><span>цена</span>
+                    <button class="user-block__cart-btn" type="button">x</button>
+                  </li>
+                  <li class="user-block__cart-item" data-article="247B35"><a href="/">Название товара</a><span>цена</span>
+                    <button class="user-block__cart-btn" type="button">x</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="slider__wrap">
+          <div class="slider__item slider__item--1">
+            <div class="slider__content">Уникальные украшения<br>ручной работы</div>
+          </div>
+          <div class="slider__item slider__item--2">
+            <div class="slider__content">Уникальные украшения<br>ручной работы</div>
+          </div>
+          <div class="slider__item slider__item--3">
+            <div class="slider__content">Уникальные украшения<br>ручной работы</div>
+          </div>
+        </div>
+        <button class="slider__control-prev" type="button"></button>
+        <button class="slider__control-next" type="button"></button>
+      </div>
+    </header>
+    <div class="page-main"> 
+      <div class="container">
+        <div class="catalog">
+          <aside class="catalog__sidebar">
+            <div class="catalog__menu-wrap">
+              <div class="catalog__menu-row"><a class="catalog__menu-btn" id="catalog-nav" href="/">Меню</a>
+                <ul class="catalog__menu-dropdown">
+                  <li><a href="/">Для продавцов</a></li>
+                  <li><a href="/">Для покупателей</a></li>
+                  <li><a href="/">Каталог товаров</a></li>
+                  <li><a href="/">О нас</a></li>
+                </ul><a class="catalog__menu-btn" id="catalog-currency" href="/">Выбор валюты</a>
+                <ul class="catalog__menu-dropdown">
+                  <li><a href="/" data-currency="Руб">Руб</a></li>
+                  <li><a href="/" data-currency="Usd">Usd</a></li>
+                  <li><a href="/" data-currency="Gbp">Gbp</a></li>
+                  <li><a href="/" data-currency="Cad">Cad</a></li>
+                </ul>
+                <input type="text" name="currency" hidden>
+              </div>
+              <div class="catalog__menu-row"><a class="catalog__menu-btn" id="catalog-filter" href="/">Развернуть каталог</a></div>
+            </div>
+            <h2 class="catalog__title">Каталог</h2>
+            <form class="catalog__filter-wrap" action="/" method="GET">
+              <div class="catalog__filter-item"><span class="catalog__filter-spoiler">Все для свадьбы</span></div>
+              <div class="catalog__filter-item"><span class="catalog__filter-spoiler">Аксессуары              </span></div>
+              <div class="catalog__filter-item catalog__filter-item--active"><span class="catalog__filter-spoiler">Обувь</span>
+                <div class="catalog__filter-content"><span class="catalog__filter-type catalog__filter-type--active">Тип</span>
+                  <ul class="catalog__filter-param">
+                    <li>
+                      <input type="checkbox" id="checkbox-shoes-1">
+                      <label for="checkbox-shoes-1">Ботинки</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="checkbox-shoes-2" checked>
+                      <label for="checkbox-shoes-2">Галоши</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="checkbox-shoes-3">
+                      <label for="checkbox-shoes-3">Кеды</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="checkbox-shoes-4">
+                      <label for="checkbox-shoes-4">Кроссовки</label>
+                    </li>
+                  </ul><span class="catalog__filter-type catalog__filter-type--active">Кому</span>
+                  <ul class="catalog__filter-param">
+                    <li>
+                      <input type="checkbox" id="checkbox-men" checked>
+                      <label for="checkbox-men">Мужчинам</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="checkbox-women">
+                      <label for="checkbox-women">Женщинам</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="checkbox-boy">
+                      <label for="checkbox-boy">Мальчикам</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="checkbox-girl">
+                      <label for="checkbox-girl">Девочкам</label>
+                    </li>
+                  </ul><span class="catalog__filter-type">Цвет</span><span class="catalog__filter-type">Сезон</span><span class="catalog__filter-type">Скидка</span><span class="catalog__filter-type catalog__filter-type--active">Цена</span>
+                  <div class="catalog__filter-param">
+                    <div class="catalog__filter-range">
+                      <input type="text" id="minCost" data-range="0" placeholder="от">
+                      <input type="text" id="maxCost" data-range="75000" placeholder="до">
+                      <div class="catalog__filter-slider" id="slider-range"></div>
+                    </div>
+                  </div><span class="catalog__filter-type">Аксессуары</span>
+                </div>
+              </div>
+              <div class="catalog__filter-item"><span class="catalog__filter-spoiler">Для детей</span></div>
+              <div class="catalog__filter-item"><span class="catalog__filter-spoiler">Для домашнего уюта</span></div>
+              <div class="catalog__filter-item"><span class="catalog__filter-spoiler">Живопись</span></div>
+              <div class="catalog__filter-item"><span class="catalog__filter-spoiler">Игрушки</span></div>
+              <div class="catalog__filter-item"><span class="catalog__filter-spoiler">Канцелярские товары</span></div>
+              <div class="catalog__filter-item"><span class="catalog__filter-spoiler">Музыкальные инструменты</span></div>
+              <div class="catalog__filter-item"><span class="catalog__filter-spoiler">Одежда</span></div>
+              <div class="catalog__filter-item"><span class="catalog__filter-spoiler">Подарки</span></div>
+              <div class="catalog__filter-item"><span class="catalog__filter-spoiler">Сувениры</span></div>
+              <div class="catalog__filter-item"><span class="catalog__filter-spoiler">Украшения</span></div>
+              <div class="catalog__filter-item"><span class="catalog__filter-spoiler">Художественное фото</span></div>
+            </form>
+          </aside>
+          <section class="catalog__wrapper">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href="index.html">Главная/</a></li>
+              <li class="breadcrumbs__item breadcrumbs__item--current">Каталог</li>
+            </ul>
+            <h2 class="catalog__title">Популярные товары</h2>
+            <section class="catalog__list">
+              <article class="product">
+                <h2 class="product__title">Весеннее платье</h2>
+                <div class="product__author">Автор: <span>Alice-Silver</span></div>
+                <div class="product__article" data-article="247B34">Артикул: <span>247B34</span></div>
+                <div class="product__price">7400 р.</div>
+                <div class="product__properties">
+                  <div class="product__size">
+                    <input type="text" name="product-size" readonly placeholder="Размер">
+                    <ul class="product__size-list">
+                      <li class="product__size-item" data-size="XS">XS</li>
+                      <li class="product__size-item" data-size="S">S</li>
+                      <li class="product__size-item" data-size="M">M</li>
+                      <li class="product__size-item" data-size="L">L</li>
+                      <li class="product__size-item" data-size="XL">XL</li>
+                      <li class="product__size-item" data-size="XXL">XXL</li>
+                    </ul>
+                  </div>
+                  <div class="product__quantity"> 
+                    <input type="text" name="product-quantity" readonly value="1 шт">
+                    <button type="button" data-action="plus"></button>
+                    <button type="button" data-action="minus"></button>
+                  </div>
+                </div>
+                <div class="product__image"><img src="http://www.placehold.it/300x300" alt=""></div>
+                <div class="product__action"><a class="btn product__buy" href="#">Купить</a><a class="btn product__favorites" href="#">         </a></div>
+              </article>
+              <article class="product">
+                <h2 class="product__title">Весеннее платье</h2>
+                <div class="product__author">Автор: <span>Alice-Silver</span></div>
+                <div class="product__article" data-article="247B34">Артикул: <span>247B34</span></div>
+                <div class="product__price">7400 р.</div>
+                <div class="product__properties">
+                  <div class="product__size">
+                    <input type="text" name="product-size" readonly placeholder="Размер">
+                    <ul class="product__size-list">
+                      <li class="product__size-item" data-size="XS">XS</li>
+                      <li class="product__size-item" data-size="S">S</li>
+                      <li class="product__size-item" data-size="M">M</li>
+                      <li class="product__size-item" data-size="L">L</li>
+                      <li class="product__size-item" data-size="XL">XL</li>
+                      <li class="product__size-item" data-size="XXL">XXL</li>
+                    </ul>
+                  </div>
+                  <div class="product__quantity"> 
+                    <input type="text" name="product-quantity" readonly value="1 шт">
+                    <button type="button" data-action="plus"></button>
+                    <button type="button" data-action="minus"></button>
+                  </div>
+                </div>
+                <div class="product__image"><img src="http://www.placehold.it/300x300" alt=""></div>
+                <div class="product__action"><a class="btn product__buy" href="#">Купить</a><a class="btn product__favorites" href="#">         </a></div>
+              </article>
+              <article class="product">
+                <h2 class="product__title">Весеннее платье</h2>
+                <div class="product__author">Автор: <span>Alice-Silver</span></div>
+                <div class="product__article" data-article="247B34">Артикул: <span>247B34</span></div>
+                <div class="product__price">7400 р.</div>
+                <div class="product__properties">
+                  <div class="product__size">
+                    <input type="text" name="product-size" readonly placeholder="Размер">
+                    <ul class="product__size-list">
+                      <li class="product__size-item" data-size="XS">XS</li>
+                      <li class="product__size-item" data-size="S">S</li>
+                      <li class="product__size-item" data-size="M">M</li>
+                      <li class="product__size-item" data-size="L">L</li>
+                      <li class="product__size-item" data-size="XL">XL</li>
+                      <li class="product__size-item" data-size="XXL">XXL</li>
+                    </ul>
+                  </div>
+                  <div class="product__quantity"> 
+                    <input type="text" name="product-quantity" readonly value="1 шт">
+                    <button type="button" data-action="plus"></button>
+                    <button type="button" data-action="minus"></button>
+                  </div>
+                </div>
+                <div class="product__image"><img src="http://www.placehold.it/300x300" alt=""></div>
+                <div class="product__action"><a class="btn product__buy" href="#">Купить</a><a class="btn product__favorites" href="#">         </a></div>
+              </article>
+              <article class="product">
+                <h2 class="product__title">Весеннее платье</h2>
+                <div class="product__author">Автор: <span>Alice-Silver</span></div>
+                <div class="product__article" data-article="247B34">Артикул: <span>247B34</span></div>
+                <div class="product__price">7400 р.</div>
+                <div class="product__properties">
+                  <div class="product__size">
+                    <input type="text" name="product-size" readonly placeholder="Размер">
+                    <ul class="product__size-list">
+                      <li class="product__size-item" data-size="XS">XS</li>
+                      <li class="product__size-item" data-size="S">S</li>
+                      <li class="product__size-item" data-size="M">M</li>
+                      <li class="product__size-item" data-size="L">L</li>
+                      <li class="product__size-item" data-size="XL">XL</li>
+                      <li class="product__size-item" data-size="XXL">XXL</li>
+                    </ul>
+                  </div>
+                  <div class="product__quantity"> 
+                    <input type="text" name="product-quantity" readonly value="1 шт">
+                    <button type="button" data-action="plus"></button>
+                    <button type="button" data-action="minus"></button>
+                  </div>
+                </div>
+                <div class="product__image"><img src="http://www.placehold.it/300x300" alt=""></div>
+                <div class="product__action"><a class="btn product__buy" href="#">Купить</a><a class="btn product__favorites" href="#">         </a></div>
+              </article>
+            </section>
+          </section>
+        </div>
+      </div>
+      <section class="about">
+        <div class="container">
+          <h2 class="about__title">О проекте TerraHand</h2>
+          <div class="about__content"> <a class="logo logo--about"><img src="img/logo-1.png" srcset="img/logo-1@2x.png 2x" alt="TerraHand"><img src="img/logo-2.png" srcset="img/logo-2@2x.png 2x" alt="TerraHand"></a>
+            <div class="about__text">
+              <p>Первый в России развлекательный ресурс о бизнесе. Новый формат для людей, создающих будущее. Ежедневно мы публикуем много важнейшие деловые новости, аналитические статьи и многое развлекательные тексты, статьи сопровождая их ироничными иллюстрациями. Ежедневно мы публикуем много важнейшие деловые новости, аналитические. статьи Свидетельство о регистрации средства массовой информации — Эл №ФС77 — 54872 Выдано от 26 июля 2013г. Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор). Любое использование материалов допускается только с письменного согласия редакции.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="page-footer">
+      <nav class="page-footer__nav">
+        <div class="container">
+          <ul class="page-footer__nav-list">
+            <li class="page-footer__nav-item"><a href="/">Для продавцов</a>
+              <ul class="page-footer__nav-list-lvl2">
+                <li class="page-footer__nav-item"><a href="/">Справочник продавца</a></li>
+                <li class="page-footer__nav-item"><a href="/">Открытьмагазин</a></li>
+                <li class="page-footer__nav-item"><a href="/">Клубны карты (тарифы)</a></li>
+              </ul>
+            </li>
+            <li class="page-footer__nav-item"><a href="/">Для покупателей</a>
+              <ul class="page-footer__nav-list-lvl2">
+                <li class="page-footer__nav-item"><a href="/">Как купить</a></li>
+                <li class="page-footer__nav-item"><a href="/">Как получить</a></li>
+                <li class="page-footer__nav-item"><a href="/">Скидки и акции</a></li>
+                <li class="page-footer__nav-item"><a href="/">Правила покупателя</a></li>
+                <li class="page-footer__nav-item"><a href="/">Интересные статьи</a></li>
+                <li class="page-footer__nav-item"><a href="/">Стол заказов</a></li>
+                <li class="page-footer__nav-item"><a href="/">Вопрос-ответ</a></li>
+              </ul>
+            </li>
+            <li class="page-footer__nav-item"><a href="/">Каталог товаров</a>
+              <ul class="page-footer__nav-list-lvl2">
+                <li class="page-footer__nav-item"><a href="/">Живопись</a></li>
+                <li class="page-footer__nav-item"><a href="/">Художественная фотография</a></li>
+                <li class="page-footer__nav-item"><a href="/">Одежда</a></li>
+                <li class="page-footer__nav-item"><a href="/">Обувь</a></li>
+                <li class="page-footer__nav-item"><a href="/">Украшения</a></li>
+                <li class="page-footer__nav-item"><a href="/">Для домашнего ухода</a></li>
+                <li class="page-footer__nav-item"><a href="/">Игрушки</a></li>
+                <li class="page-footer__nav-item"><a href="/">Подарки и сувениры</a></li>
+                <li class="page-footer__nav-item"><a href="/">Аксессуары</a></li>
+                <li class="page-footer__nav-item"><a href="/">Все для свадьбы</a></li>
+                <li class="page-footer__nav-item"><a href="/">Для детей</a></li>
+                <li class="page-footer__nav-item"><a href="/">Музыкальные инструменты</a></li>
+                <li class="page-footer__nav-item"><a href="/">Концелярские товары</a></li>
+              </ul>
+            </li>
+            <li class="page-footer__nav-item"><a href="/">О нас</a>
+              <ul class="page-footer__nav-list-lvl2">           
+                <li class="page-footer__nav-item"><a href="/">О нас</a></li>
+                <li class="page-footer__nav-item"><a href="/">Нашие приемущества</a></li>
+                <li class="page-footer__nav-item"><a href="/">Отзывы о нас</a></li>
+                <li class="page-footer__nav-item"><a href="/">Новости</a></li>
+                <li class="page-footer__nav-item"><a href="/">Реклама на проекте</a></li>
+                <li class="page-footer__nav-item"><a href="/">Контакты</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="page-footer__body">
+        <div class="container">
+          <div class="currency">
+            <select name="currency">
+              <option value="1">Рубли РФ</option>
+              <option value="2">Доллары США</option>
+            </select>
+          </div>
+          <div class="social"><a class="social__btn" href=""><i class="icon icon-blogger"></i></a><a class="social__btn" href=""><i class="icon icon-facebook"></i></a><a class="social__btn" href=""><i class="icon icon-gplus"></i></a><a class="social__btn" href=""><i class="icon icon-instagram"></i></a><a class="social__btn" href=""><i class="icon icon-odnoklassniki"></i></a><a class="social__btn" href=""><i class="icon icon-pinterest"></i></a><a class="social__btn" href=""><i class="icon icon-twitter"></i></a><a class="social__btn" href=""><i class="icon icon-vk"></i></a><a class="social__btn" href=""><i class="icon icon-youtube"></i></a></div><a class="btn btn--to-top" href="">Наверх<i class="icon icon-user"></i></a>
+        </div>
+      </div>
+      <div class="page-footer__bottom">
+        <div class="container">
+          <div class="page-footer__copyright-wrap">
+            <div class="page-footer__copyright">
+              <p>2017 “TerraHand” office@terrahand.ru</p>
+              <p>Все права защищены, охраняются законодательством РФ и зарубежных стран. </p>
+            </div>
+            <div class="page-footer__copyright">  
+              <p>2017 SAVsolution</p>
+              <p>Все права защищены. Изготовление сайтов и интернет-магазинов.</p>
+            </div>
+          </div>
+          <div class="page-footer__privacy"><a href="/">Правила пользования сайтом и прочая правовая информация.</a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/libs/jquery-2.2.4.min.js"> </script>
+    <script src="js/libs/jquery-ui.min.js"> </script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
