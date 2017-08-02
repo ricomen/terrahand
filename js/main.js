@@ -20,24 +20,24 @@ $(document).ready(function() {
 
 
   //фиксированная плашка меню при прокрутке  
-  var pageTopHeight = $(".page-header__top").outerHeight();
-  var pageBodyHeight = $(".page-header__body").outerHeight();  
-  var checker = 0;
+  // var pageTopHeight = $(".page-header__top").outerHeight();
+  // var pageBodyHeight = $(".page-header__body").outerHeight();  
+  // var checker = 0;
 
-  $(window).on("resize", function() {
-    if( $(this).width() > 1199) {
-      $(this).on("scroll", function() {    
-        if($(this).scrollTop() > (pageBodyHeight + pageTopHeight) && checker != 1) {      
-          $(".page-header__body").clone().prependTo(".page-header").addClass('page-header__body--fixed');
-            checker = 1;
-        } else if ($(this).scrollTop() <= pageTopHeight && checker != 0) {
-            checker = 0;
-            $(".page-header__body").removeClass('page-header__body--fixed');
-            $(".page-header > .page-header__body:first").remove();      
-        };
-      });      
-    }
-  });
+  // $(window).on("resize", function() {
+  //   if( $(this).width() > 1199) {
+  //     $(this).on("scroll", function() {    
+  //       if($(this).scrollTop() > (pageBodyHeight + pageTopHeight) && checker != 1) {      
+  //         $(".page-header__body").clone().prependTo(".page-header").addClass('page-header__body--fixed');
+  //           checker = 1;
+  //       } else if ($(this).scrollTop() <= pageTopHeight && checker != 0) {
+  //           checker = 0;
+  //           $(".page-header__body").removeClass('page-header__body--fixed');
+  //           $(".page-header > .page-header__body:first").remove();      
+  //       };
+  //     });      
+  //   }
+  // });
 
   // количество товара
   $(".product__quantity button[type='button']").on("click", function() {
@@ -145,7 +145,4 @@ $(document).ready(function() {
 });//document ready
 
 
-$(window).load(function() {
-  /* Act on the event */
-});
 //jQuery end
